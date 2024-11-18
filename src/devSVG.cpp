@@ -658,7 +658,8 @@ void svg_new_page(const pGEcontext gc, pDevDesc dd) {
   (*stream) << " class='svglite'>\n";
 
 
-  // Setting default styles  (*stream) << "<defs>\n";
+  // Setting default styles  
+  (*stream) << "<defs>\n";
   (*stream) << "  <style>\n";
   (*stream) << "    line {\n";
   (*stream) << "      fill: none;\n";
