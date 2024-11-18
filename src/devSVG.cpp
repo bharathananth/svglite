@@ -658,21 +658,44 @@ void svg_new_page(const pGEcontext gc, pDevDesc dd) {
   (*stream) << " class='svglite'>\n";
 
 
-  // Setting default styles
-  (*stream) << "<defs>\n";
-  (*stream) << "  <style type='text/css'><![CDATA[\n";
-  (*stream) <<      svgd->webfonts;
-  (*stream) << "    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {\n";
+  // Setting default styles  (*stream) << "<defs>\n";
+  (*stream) << "  <style>\n";
+  (*stream) << "    line {\n";
   (*stream) << "      fill: none;\n";
   (*stream) << "      stroke: #000000;\n";
   (*stream) << "      stroke-linecap: round;\n";
   (*stream) << "      stroke-linejoin: round;\n";
   (*stream) << "      stroke-miterlimit: 10.00;\n";
   (*stream) << "    }\n";
-  (*stream) << "    .svglite text {\n";
-  (*stream) << "      white-space: pre;\n";
+  (*stream) << "    polyline {\n";
+  (*stream) << "      fill: none;\n";
+  (*stream) << "      stroke: #000000;\n";
+  (*stream) << "      stroke-linecap: round;\n";
+  (*stream) << "      stroke-linejoin: round;\n";
+  (*stream) << "      stroke-miterlimit: 10.00;\n";
   (*stream) << "    }\n";
-  (*stream) << "  ]]></style>\n";
+  (*stream) << "    path {\n";
+  (*stream) << "      fill: none;\n";
+  (*stream) << "      stroke: #000000;\n";
+  (*stream) << "      stroke-linecap: round;\n";
+  (*stream) << "      stroke-linejoin: round;\n";
+  (*stream) << "      stroke-miterlimit: 10.00;\n";
+  (*stream) << "    }\n";
+  (*stream) << "    rect {\n";
+  (*stream) << "      fill: none;\n";
+  (*stream) << "      stroke: #000000;\n";
+  (*stream) << "      stroke-linecap: round;\n";
+  (*stream) << "      stroke-linejoin: round;\n";
+  (*stream) << "      stroke-miterlimit: 10.00;\n";
+  (*stream) << "    }\n";
+  (*stream) << "    circle {\n";
+  (*stream) << "      fill: none;\n";
+  (*stream) << "      stroke: #000000;\n";
+  (*stream) << "      stroke-linecap: round;\n";
+  (*stream) << "      stroke-linejoin: round;\n";
+  (*stream) << "      stroke-miterlimit: 10.00;\n";
+  (*stream) << "    }\n";
+  (*stream) << "  </style>\n";
   (*stream) << "</defs>\n";
 
   (*stream) << "<rect width='100%' height='100%'";
